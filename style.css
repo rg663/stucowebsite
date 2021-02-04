@@ -5,51 +5,33 @@ html, body {
   height: 100%;
 }
 
-h1 {
-  font-size: 48px;
-}
-
-p {
-  max-width: 65%;
-  min-width: 500px;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2.6rem;
-}
-
-div {
-  padding-right: 30px;
-  height: 100%;
-  width: 100%;
-}
-
-video {
-  background-color: #000000;
-  border: 2px solid black;
-}
-
-.container {
-  display: flex;
+.entire {
+	display: block;
 }
 
 .main {
   padding-left: 30px;
-  min-width: 75%;
+	justify-content:center;
+}
+
+h2 {
+	justify-content:center;
+	display:flex;
 }
 
 .nav {
-  background-color: #FFEE00;
-  max-width: 25%;
-  min-width: 140px;
-  flex: 1;
+  border:5px solid #fff;
+	padding:5px;
+	background-color: #FFD700;
 }
 
-.nav h1 {
-  padding-left: 20px;
+li {
+	display: inline;
+	flex:1;
+	margin:1rem;
 }
 
-
-
-
+.header {
+	justify-content:center;
+	flex:1;
+}
