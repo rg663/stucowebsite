@@ -5,23 +5,30 @@ body {
 
 header {
   padding: 10px 0;
+	font-weight:bold;
 }
 
 header .row,
-footer .row {}
+footer .row {
+	font-weight:bold;
+}
 
 header h1 {
   font-weight: 400;
+	font-weight:bold;
 	font-size: 30px;
   margin: 0;
 }
 
 header nav {
-		display: -webkit-inline-box;
+	display: -webkit-inline-box;
+	font-weight:bold;
 }
 
 header p {
   padding: 10px;
+	color: #ffbb00c5;
+	font-weight:bold;
   margin: 0;
 }
 
