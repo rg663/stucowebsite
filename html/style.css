@@ -67,11 +67,12 @@ section .row img {
 
 .btn.btn-primary {
   border-radius: 0px;
-	width:100px;
+	width:135px;
 	height:35px;
   border: 0px;
   color: #000000;
   text-shadow: none;
+	justify-content: center;
   background-color: #ffbb00c5;
 }
 
@@ -103,4 +104,15 @@ footer ul {
 footer li img {
   width: 32px;
   height: 32px;
+}
+h1{
+	font-weight:bold;
+}
+
+header.row h1{
+	font-size:1.5em;
+}
+
+body li{
+	list-style-type: url(/images/favicon.png);
 }
