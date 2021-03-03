@@ -25,29 +25,72 @@
 			</nav>
 		</div>
 	</header>
+	
 	<section class="row">
-
 	<div class="container">
+	<h3 class="heading-3">no matter your schedule or experience, we'd love to have you on our team! student council members do it all, and everyone brings their own magic to the table. just fill out the quick form below and we'll be in touch with next steps. </h3>
+	<div></div>
 	<h3>we'd love to know more about you!</h3>
 	<form action="/html/formdata.html" method="POST">
 			<label for="first-name"> first name: </label>
 	<input type="text" name="first-name" id="first-name">
-		<div></div>
+		<br>
 	<label for="last-name"> last name: </label>
 	<input type="text" name="last-name" id="last-name">
-		<div></div>
+		<br>
 	<label for="email-address"> personal email: </label>
 	<input type="email" name="email-address" id="email-address">
-    <button type="submit" class="btn btn-primary">hop onboard!</button>
+	<br>
+	<label for="email-address"> school email: </label>
+	<input type="email" name="school-address" id="school-address" value="______@cppasd.com">
+	<br>
+	<label for="grade">what grade are you in? </label>
+  <select id="grade" name="grade">
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select>
+	<br>
+  <label>cohort: </label>
+	<br>
+  <input type="radio" id="A" name="answer" value="A">
+  <label for="A">A</label>
+  <br>
+  <input type="radio" id="B" name="answer" value="B">
+  <label for="B">B</label>
+	<br>
+	<input type="radio" id="C" name="answer" value="C">
+  <label for="C">C</label>
+	<h3> what committee are you most interested in joining? select all that apply: </h3>
+	<p>note: your choice is not binding in any way. </p>
+	<div></div>
+  <input id="social" name="committee" type="checkbox" value="social">
+  <label for="social">marketing </label>
+  <br>
+  <input id="event planning" name="committee" type="checkbox" value="event planning">
+  <label for="event planning">event planning </label>
+  <br>
+  <input id="communications" name="committee" type="checkbox" value="communications">
+  <label for="communications">communications</label>
+  <br>
+  <input id="outreach" name="committee" type="checkbox" value="outreach">
+  <label for="outreach">outreach </label>
+	<br>
+	<section class="extra-info">
+  <h3>anything else you'd like us to know? </h3>
+	<textarea id="info" name="info" rows="3" cols="40"></textarea>
+	<br>
+	<button type="submit" class="btn btn-primary">hop onboard!</button>
   </form>
 	</div>
 	</section>
 	</body>
 
-<div class="container">
+<div class="container" id="bread">
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="/html/index.html">landing</a></li>
+			<li class="breadcrumb-item"><a href="../index.html">home</a></li>
 			<li class="breadcrumb-item"><a href="/html/jointheteam.html">join the team</a></li>
 		</ol>
 	</nav>
