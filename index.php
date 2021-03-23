@@ -1,14 +1,11 @@
-<!DOCTYPE html>
 <html>
-
 <head>
 	<title>confirmation</title>
-	<link rel="shortcut icon" type="image/jpg" href="../images/favicon.png">
+	<link rel="shortcut icon" type="image/jpg" href="/images/favicon.png">
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
 	 crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel="stylesheet" type="text/css">
-	<script src="../script.js"></script>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -59,11 +56,8 @@
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="../index.html">home</a></li>
-			<li class="breadcrumb-item"><a href="formdata.html">confirmation</a></li>
+			<li class="breadcrumb-item"><a href="index.php">confirmation</a></li>
 		</ol>
 	</nav>
 </div>
-
-</body>
-
 </html>

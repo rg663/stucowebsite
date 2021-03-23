@@ -3,49 +3,74 @@
 
 <head>
 	<title>join the team</title>
-	<link rel="shortcut icon" type="image/jpg" href="/images/favicon.png">
+	<link rel="shortcut icon" type="image/jpg" href="../images/favicon.png">
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
 	 crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="../script.js">
+	</script>
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
+<div class="topnav" id="searchbar">
+<div class="search-container">
+	<form action="search.php" id="searching">
+		<input type="text" placeholder="search website" name="search" id="query">
+		<button type="submit" class="button" id="searchbutton">go</button>
+		</form>
+</div>
+	<script>
+		const f = document.getElementById('searching');
+		const q = document.getElementById('query');
+		const google = 'https://www.google.com/search?q=site%3A+';
+		const site = 'https://cpphsstudentcouncil.rg663.repl.co/';
+		function submitted(event) {
+			event.preventDefault();
+			const url = google + site + '+' + q.value;
+			const win = window.open(url, '_blank');
+			win.focus();
+		}
+		f.addEventListener('submit', submitted);
+</script>
+</div>
+		
 <body>
 	<header class="container">
 		<div class="row">
-			<h1 class="col-sm-4">#hawknation</h1>
+			<p class="col-sm-4"><a class="nav-link" href="../index.html" id="backhome">back to #hawknation</a></p>
 			<nav class="col-sm-8 text-center">
-				<p class="nav-item"> <a class="nav-link" href="/html/upcomingevents.html"> upcoming events &#9734 </a></p>
-				<p class="nav-item"> <a class="nav-link" href="/html/photos.html"> photos &#9734</a></p>
-				<p class="nav-item"> <a class="nav-link" href="/html/spiritwear.html"> spiritwear &#9734</a></p>
-				<p class="nav-item"> <a class="nav-link" href="/html/ourteam.html"> our team &#9734</a></p>
-				<p class="nav-item"> <a class="nav-link" href="/html/jointheteam.html"> join the team &#9734</a></p>
-				<p class="nav-item"> <a class="nav-link" href="/html/aboutus.html"> about us &#9734</a></p>
+				<p class="nav-item"> <a class="nav-link" href="upcomingevents.html"> upcoming events &#9734 </a></p>
+				<p class="nav-item"> <a class="nav-link" href="photos.html"> photos &#9734</a></p>
+				<p class="nav-item"> <a class="nav-link" href="spiritwear.html"> spiritwear &#9734</a></p>
+				<p class="nav-item"> <a class="nav-link" href="ourteam.html"> our team &#9734</a></p>
+				<p class="nav-item"> <a class="nav-link" href="jointheteam.html"> join the team &#9734</a></p>
+				<p class="nav-item"> <a class="nav-link" href="aboutus.html"> about us &#9734</a></p>
 			</nav>
 		</div>
 	</header>
 	
 	<section class="row">
 		<div class="container">
-		<h3 class="heading-3">no matter your schedule or experience, we'd love to have you on our team! student council members do it all, and everyone brings their own magic to the table. just fill out the quick form below and we'll be in touch with next steps. </h3>
+		<h3 id="heading-3">no matter your schedule or experience, we'd love to have you on our team! student council members do it all, and everyone brings their own magic to the table. just fill out the quick form below and we'll be in touch with next steps. </h3>
 		<div></div>
 		<h3>we'd love to know more about you!</h3>
-		<form action="/html/formdata.html" method="POST">
-			<label for="first-name"> first name: </label>
-		<input type="text" name="first-name" id="first-name">
+		<form action="index.php" method="POST" onsubmit="validateForm()" id="join">
+		<label for="first-name"> first name: </label>
+		<input type="text" name="first-name" id="first-name" required>
 		<br>
 		<label for="last-name"> last name: </label>
-		<input type="text" name="last-name" id="last-name">
+		<input type="text" name="last-name" id="last-name" required>
 		<br>
 		<label for="email-address"> personal email: </label>
-		<input type="email" name="email-address" id="email-address">
+		<input type="email" name="email-address" id="email-address" required>
 		<br>
-		<label for="email-address"> school email: </label>
-		<input type="email" name="school-address" id="school-address" value="______@cppasd.com">
+		<label for="school-address"> school email: </label>
+		<input type="email" name="school-address" id="school-address" required>
 		<br>
 		<label for="grade">what grade are you in? </label>
-  	<select id="grade" name="grade">
+  	<select id="grade" name="grade" required>
+			<option value="null"></option>
     	<option value="9">9</option>
     	<option value="10">10</option>
     	<option value="11">11</option>
@@ -74,9 +99,11 @@
   	<input id="communications" name="committee" type="checkbox" value="communications">
   	<label for="communications">communications </label>
   	<br>
-  	<input id="outreach" name="committee" type="checkbox" value="outreach">
-  	<label for="outreach">outreach </label>
+  	<input id="funding" name="committee" type="checkbox" value="funding">
+  	<label for="funding">funding </label>
 		<br>
+		<input id="outreach" name="committee" type="checkbox" value="outreach">
+  	<label for="outreach">outreach </label>
 		<section class="extra-info">
   	<h3>anything else you'd like us to know? </h3>
 		<textarea id="info" name="info" rows="3" cols="40"></textarea>
@@ -88,12 +115,46 @@
 
 </body>
 
+	<section class="container">
+		<button class="openChatBtn" onclick="openForm()">💬 chat</button>
+		<div class="openChat">
+		<form method="POST" action="../action_page.php">
+		<h1>get in touch!</h1>
+		<label for="msg"><b>message</b></label>
+		<textarea placeholder="type message here ..." name="msg" required></textarea>
+		<label for="email"><b>personal email</b></label>
+		<br>
+		<input type="email" name="email-address" id="email-address" required>
+		<br>
+		<label for="school-address"><b>school email</b></label>
+		<br>
+		<input type="email" name="school-address" id="school-address">
+		<br>
+		<button type="submit" class="btn">send</button>
+		<button type="button" class="closeChatBtn" onclick="closeForm()">
+		cancel
+		</button>
+		</form>
+		</div>
+		<script>
+			document.querySelector(".openChatBtn") .addEventListener("click", openForm);
+			document.querySelector(".closeChatBtn").addEventListener("click", closeForm);
+			function openForm() {
+					document.querySelector(".openChat").style.display = "block";
+			}
+			function closeForm() {
+					document.querySelector(".openChat").style.display = "none";
+			}
+		</script>
+	</div>
+	</section>
+
 <br>
 <div class="container" id="bread">
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="../index.html">home</a></li>
-			<li class="breadcrumb-item"><a href="/html/jointheteam.html">join the team</a></li>
+			<li class="breadcrumb-item"><a href="jointheteam.html">join the team</a></li>
 		</ol>
 	</nav>
 </div>
